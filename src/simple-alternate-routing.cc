@@ -1,21 +1,4 @@
-/* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
-/*
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 2 as
- * published by the Free Software Foundation;
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- *
- */
 
-//
 // Network topology
 //
 //  n0
@@ -27,10 +10,6 @@
 //   n1--------------------------
 //          1.5 Mb/s, 100ms
 //
-// this is a modification of simple-global-routing to allow for
-// a single hop but higher-cost path between n1 and n3
-// 
-// - Tracing of queues and packet receptions to file "simple-rerouting.tr"
 
 #include <iostream>
 #include <fstream>
