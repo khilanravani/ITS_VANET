@@ -1,28 +1,4 @@
-/* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
-/*
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 2 as
- * published by the Free Software Foundation;
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- *
- * Contributed by:  Luis Cortes (cortes@gatech.edu)
- */
 
-
-// This script exercises global routing code in a mixed point-to-point
-// and csma/cd environment.  We bring up and down interfaces and observe
-// the effect on global routing.  We explicitly enable the attribute
-// to respond to interface events, so that routes are recomputed
-// automatically.
-//
 // Network topology
 //
 //  n0
@@ -36,8 +12,6 @@
 //   ----------------------------------------
 //                p-p
 //
-// - at time 1 CBR/UDP flow from n1 to n6's IP address on the n5/n6 link
-// - at time 10, start similar flow from n1 to n6's address on the n1/n6 link
 //
 //  Order of events
 //  At pre-simulation time, configure global routes.  Shortest path from
@@ -59,8 +33,6 @@
 //    routing back to n1-n6 since the interface up notification will cause
 //    a new local interface route, at higher priority than global routing
 //  At time 16s, stop the second flow.
-
-// - Tracing of queues and packet receptions to file "dynamic-global-routing.tr"
 
 #include <iostream>
 #include <fstream>
